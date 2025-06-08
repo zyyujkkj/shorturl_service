@@ -24,7 +24,8 @@ go run transform.go
 cd api
 go run shorturl.go
 ```
-##✅ 功能特性
+✅ 功能特性
+
 ✅ 短链接生成
 
 ✅ 短链接跳转
