@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package transform;
+option go_package="./transform";
+
+message GetShortUrlRequest {
+  string url = 1;
+}
+
+message GetShortUrlResponse {
+  string short_url = 1;
+}
+
+message GetLongUrlRequest {
+  string short_url = 1;
+}
+
+message GetLongUrlResponse {
+  string url = 1;
+}
+
+service Transform {
+  rpc GetShortUrl(GetShortUrlRequest) returns(GetShortUrlResponse);
+  rpc GetLongUrl(GetLongUrlRequest) returns(GetLongUrlResponse);
+}

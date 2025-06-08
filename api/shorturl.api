@@ -1,0 +1,26 @@
+syntax = "v1"
+
+type getShortUrlRequest {
+	Url string `json:"url"`
+}
+
+type getShortUrlResponse {
+	ShortUrl string `json:"short_url"`
+}
+
+type getLongUrlRequest {
+	ShortUrl string `json:"short_url"`
+}
+
+type getLongUrlResponse {
+	Url string `json:"url"`
+}
+
+service shorturl-api {
+	@handler GetShortUrl
+	post /short (getShortUrlRequest) returns (getShortUrlResponse)
+
+	@handler GetLongUrl // TODO: set handler name and delete this comment
+	post /long (getLongUrlRequest) returns (getLongUrlResponse)
+}
+
