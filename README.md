@@ -18,12 +18,12 @@
 ```bash
 cd rpc/transform
 go run transform.go
-
+```
 3. 启动 API 服务：
 ```bash
 cd api
 go run shorturl.go
-
+```
 ##✅ 功能特性
 ✅ 短链接生成
 
